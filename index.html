@@ -10,7 +10,7 @@
 
       body {
         margin: 20px;
-				font-family: sans-serif;
+        font-family: sans-serif;
       }
 
       .container {
@@ -19,7 +19,7 @@
         width: 100%;
         max-width: 800px;
         padding: 20px;
-				margin: auto;
+        margin: auto;
       }
 
       .container * {
@@ -27,30 +27,46 @@
         margin: auto;
       }
 
-			#error-container {
-				display: none;
-				background: #ff6666;
-				border-radius: 10px;
-				padding: 10px;
-				margin-bottom: 10px;
-				text-align: center;
-			}
+      #error-container {
+        display: none;
+        background: #ff6666;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
 
-			#error-container h3 {
-				margin-bottom: 5px;
-			}
+      #error-container h3 {
+        margin-bottom: 5px;
+      }
 
-			#apple-pay-button {
-				display: none;
-			}
+      #apple-pay-button {
+        display: none;
+        background-color: black;
+        background-image: -webkit-named-image(apple-pay-logo-white);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 100% calc(60% + 2px);
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        height: 30px;
+        width: 100px;
+        padding: 0px;
+        transition: background-color .15s;
+      }
+
+      #apple-pay-button:active {
+        background-color: rgb(152, 152, 152);
+      }
     </style>
   </head>
   <body>
     <div class="container">
-			<div id="error-container">
-				<h3></h3>
-				<p></p>
-			</div>
+      <div id="error-container">
+        <h3></h3>
+        <p></p>
+      </div>
       <div id="apple-pay-button"></div>
     </div>
 
