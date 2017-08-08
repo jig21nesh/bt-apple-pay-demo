@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-	var AUTH = 'client-token-here';
+	var AUTH = 'production_d8q6ttz5_3rk9vrrxf8qmqfwh';
 
 	function showError(heading, message) {
 		var errorDiv = document.querySelector('#error-container');
