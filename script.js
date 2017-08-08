@@ -2,6 +2,7 @@
 
 (function () {
   var AUTH = 'production_d8q6ttz5_3rk9vrrxf8qmqfwh';
+  var applePay;
 
   function showError(heading, message) {
     var errorDiv = document.querySelector('#error-container');
@@ -120,7 +121,8 @@
   }).then(function (client) {
     return braintree.applePay.create({
       client: client
-    }).then(function (applePay) {
+    }).then(function (applePayInstance) {
+      applePay = applePayInstance;
       return ApplePaySession.canMakePaymentsWithActiveCard(applePay.merchantIdentifier);
     }).then(function (canMakePaymentsWithActiveCard) {
       if (!canMakePaymentsWithActiveCard) {
